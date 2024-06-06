@@ -16,7 +16,9 @@ def resource_path(relative_path):
 
 
 program_path = resource_path("")
-lane_assist_path = os.path.join(os.path.dirname(sys.executable), program_path, 'ETS2_Lane_Assist')
+if "Temp" in program_path:
+    program_path = os.path.dirname(sys.executable)
+lane_assist_path = os.path.join(program_path, 'ETS2_Lane_Assist')
 frontend_path = os.path.join(lane_assist_path, 'frontend')
 start_script_path = os.path.join(lane_assist_path, 'start.bat')
 
@@ -66,19 +68,10 @@ def check_program_version(program):
         print("Checking for installed git...")
         result = subprocess.run(['git', '--version'], stdout=subprocess.PIPE)
         final = result.stdout.decode('utf-8')
-        print(final)
         if "2." in final:
             return True
         else:
             return None
-
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-
-def uninstall(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package])
 
 
 def check_node():
