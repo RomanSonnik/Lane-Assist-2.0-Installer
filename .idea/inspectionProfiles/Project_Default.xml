@@ -1,0 +1,49 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="214" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyRedeclarationInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="test.telegram_bot_id" />
+          <option value="test.user_telegram_log" />
+          <option value="test.telegram_chat_id" />
+          <option value="test.preloaded_credentials_for_google_account_name" />
+          <option value="test.client_secrets_file_name" />
+          <option value="test.test_mode" />
+          <option value="test.default_user_name_for_testing" />
+          <option value="test.time_mode" />
+          <option value="test.timezone_db_api_key" />
+          <option value="test.google_drive_csv_database_file_id" />
+          <option value="test.datetime_format" />
+          <option value="test.timezone_db_zone" />
+          <option value="test.death_date_if_error" />
+          <option value="test.current_date_if_error" />
+          <option value="test.delete_mode" />
+          <option value="test.file_extensions" />
+          <option value="test.death_enabled" />
+          <option value="test.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
