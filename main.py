@@ -16,6 +16,9 @@ def resource_path(relative_path):
 
 
 program_path = resource_path("")
+if "Temp" in program_path:
+    program_path = os.path.dirname(sys.executable)
+lane_assist_path = os.path.join(program_path, 'ETS2_Lane_Assist')
 frontend_path = os.path.join(lane_assist_path, 'frontend')
 start_script_path = os.path.join(lane_assist_path, 'start.bat')
 
@@ -47,7 +50,10 @@ def print_error_message(error_type, error):
 def check_program_version(program):
     if program == "nodejs":
         print("Checking for installed nodejs...")
+        result = subprocess.run(['node', '--version'], stdout=subprocess.PIPE)
         final = result.stdout.decode('utf-8')
+        major, minor, patch = final.replace("v", "").split(".")
+        if int(major) >= 20:
             return True
         else:
             return None
