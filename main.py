@@ -50,9 +50,9 @@ def print_error_message(error_type, error):
 def check_program_version(program):
     if program == "nodejs":
         print("Checking for installed nodejs...")
-        result = subprocess.run(['node', '--version'], stdout=subprocess.PIPE)
+        result = subprocess.run(['npm', '-V'], stdout=subprocess.PIPE)
         final = result.stdout.decode('utf-8')
-        if "20" in final:
+        if "npm install" in final:
             return True
         else:
             return None
